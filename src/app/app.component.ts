@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
+import { initFlowbite } from 'flowbite';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -8,6 +8,16 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'health-monitoring-app';
+export class AppComponent implements OnInit {
+  title: string = 'health-monitoring-app';
+  toggleValue: boolean = true;
+
+  submitForm = () => { 
+    console.log("yes");
+  }
+
+  ngOnInit(): void {
+    initFlowbite();
+  }
+
 }
