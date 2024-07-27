@@ -1,1 +1,1 @@
-# health-monitoring-app
+# HealthMonitoringApp
